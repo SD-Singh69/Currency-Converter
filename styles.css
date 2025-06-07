@@ -9,10 +9,8 @@ body {
   align-items: center;
   min-height: 100vh;
   background-image: url(bg-wall.png);
-  overflow-y: auto
+  overflow-y: auto;
 }
-
-
 
 .container {
   background-color: #bbcccf;
@@ -99,25 +97,27 @@ button {
     display: flex;
     flex-direction: column;
     align-items: stretch;
-    gap: 1.5rem; /* Give more room for the icon */
+    padding: 1rem 0; /* Add vertical padding around the whole group */
+    gap: 4.2rem;
   }
-
   .swap-icon {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) rotate(90deg);
     font-size: 1.5rem;
-    z-index: 1;
-    background-color: #bbcccf; /* match your container background */
-    padding: 0.25rem;
+    z-index: 2;
+    padding: 0.4rem;
     border-radius: 50%;
   }
-
+  .swap-icon:hover i {
+    transform: scale(1.1) rotate(90deg);
+    transition: transform 0.2s ease;
+    cursor: pointer;
+  }
   .select {
     width: 100%;
   }
-
   .msg {
     text-align: center;
     font-size: 1rem;
